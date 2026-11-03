@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Keepsake is a digital and branding agency in London: web design, posters, motion video and illustration.">
+  <title>Keepsake – Digital &amp; Branding Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Open+Sans:wght@300;400;700&amp;family=Oswald:wght@300;400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- SVG sprite: all icons are inline SVG -->
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-motion" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14"/><path d="M10 9.5v5l4.5-2.5z"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4V8h16v9h-3"/><rect x="7" y="14" width="10" height="7"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19zM14 7l3 3"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.5c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.2H7.5V13h2.8v8h3.2z"/></symbol>
+  <symbol id="i-twitter" viewBox="0 0 24 24"><path d="M22 5.9c-.7.3-1.4.5-2.1.6.8-.5 1.3-1.2 1.6-2.1-.7.4-1.5.7-2.3.9a3.6 3.6 0 0 0-6.2 3.3C9.9 8.4 7.2 7 5.4 4.8c-.9 1.6-.4 3.7 1.1 4.8-.6 0-1.1-.2-1.6-.4 0 1.7 1.2 3.2 2.9 3.6-.5.1-1 .2-1.6.1.5 1.4 1.8 2.5 3.4 2.5A7.3 7.3 0 0 1 3 17.1a10.3 10.3 0 0 0 5.6 1.6c6.7 0 10.4-5.6 10.2-10.6.7-.5 1.3-1.2 1.8-1.9z"/></symbol>
+  <symbol id="i-dribbble" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.5 6.5c4 4 9 5.5 13.5 4M8.5 3.5c3 3 6 9 7 17M3.2 13c5-1 11-.5 16 5"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></symbol>
+  <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10.5 9.5v5l4-2.5z"/></symbol>
+</svg>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#home" class="logo" aria-label="Keepsake – home">
+      <span class="logo-mark" aria-hidden="true">K</span><span aria-hidden="true">eepsake</span>
+    </a>
+
+    <!-- Burger: <button> + Popover API, so the menu opens and closes without JavaScript -->
+    <button class="burger" type="button" popovertarget="site-menu" popovertargetaction="toggle" aria-controls="site-menu" aria-label="Toggle menu">
+      <span class="burger-bar"></span><span class="burger-bar"></span><span class="burger-bar"></span>
+    </button>
+
+    <nav class="main-nav" id="site-menu" popover aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="#home" aria-current="page">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#works">Our works</a></li>
+        <li><a href="#journal">Journal</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary nav-contact">Contact us</a>
+        <button class="btn-fav" type="button" aria-label="Favourites">
+          <svg class="icon icon--fill" width="14" height="14" aria-hidden="true"><use href="#i-heart"/></svg>
+          <span class="btn-fav-text">Favourites</span>
+        </button>
+      </div>
+
+      <div class="menu-extra">
+        <address class="menu-contacts">
+          <a href="mailto:hello@keepsake.studio">hello@keepsake.studio</a>
+          <a href="tel:+442079460000">+44 20 7946 0000</a>
+          <span>London, United Kingdom</span>
+        </address>
+        <ul class="socials">
+          <li><a href="#" aria-label="Facebook"><svg class="icon icon--fill" width="16" height="16" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a href="#" aria-label="Twitter"><svg class="icon icon--fill" width="16" height="16" aria-hidden="true"><use href="#i-twitter"/></svg></a></li>
+          <li><a href="#" aria-label="Dribbble"><svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-dribbble"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="section hero" id="home">
+    <div class="container hero-inner">
+      <h1>We’re Keepsake, a Digital &amp; Branding Agency</h1>
+      <p>Specialising in web design, posters, motion video, based in London. We love to turn ideas into beautiful things.</p>
+      <div class="hero-actions">
+        <a href="#works" class="btn btn-primary">See our works</a>
+        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section portfolio" id="works" aria-labelledby="works-title">
+    <div class="container">
+      <div class="portfolio-filter">
+        <input class="visually-hidden" type="radio" name="portfolio-filter" id="filter-all" checked>
+        <input class="visually-hidden" type="radio" name="portfolio-filter" id="filter-branding">
+        <input class="visually-hidden" type="radio" name="portfolio-filter" id="filter-identity">
+        <input class="visually-hidden" type="radio" name="portfolio-filter" id="filter-print">
+        <input class="visually-hidden" type="radio" name="portfolio-filter" id="filter-web">
+        <input class="visually-hidden" type="radio" name="portfolio-filter" id="filter-motion">
+
+        <div class="portfolio-top">
+          <h2 class="section-title" id="works-title">Our awesome works</h2>
+          <div class="filter-chips" role="group" aria-label="Filter works by category">
+            <label class="chip" for="filter-all">All</label>
+            <label class="chip" for="filter-branding">Branding</label>
+            <label class="chip" for="filter-identity">Identity</label>
+            <label class="chip" for="filter-print">Print</label>
+            <label class="chip" for="filter-web">Web</label>
+            <label class="chip" for="filter-motion">Motion</label>
+          </div>
+        </div>
+
+        <ul class="portfolio-grid">
+          <li class="work-card" data-category="branding">
+            <a class="work-link" href="#works">
+              <img src="images/work-1.webp" alt="Mock-up tag on a teal background" width="358" height="282" loading="lazy">
+              <div class="work-overlay">
+                <span class="work-plus" aria-hidden="true"><svg class="icon" width="20" height="20"><use href="#i-plus"/></svg></span>
+                <h3 class="work-title">Mock-up Tag</h3>
+                <span class="work-category">Branding</span>
+              </div>
+            </a>
+          </li>
+          <li class="work-card" data-category="print">
+            <a class="work-link" href="#works">
+              <img src="images/work-2.webp" alt="Piece Paper wordmark on a light grey background" width="358" height="282" loading="lazy">
+              <div class="work-overlay">
+                <span class="work-plus" aria-hidden="true"><svg class="icon" width="20" height="20"><use href="#i-plus"/></svg></span>
+                <h3 class="work-title">Piece Paper</h3>
+                <span class="work-category">Print</span>
+              </div>
+            </a>
+          </li>
+          <li class="work-card" data-category="identity">
+            <a class="work-link" href="#works">
+              <img src="images/work-3.webp" alt="Disk with a dark sleeve" width="358" height="282" loading="lazy">
+              <div class="work-overlay">
+                <span class="work-plus" aria-hidden="true"><svg class="icon" width="20" height="20"><use href="#i-plus"/></svg></span>
+                <h3 class="work-title">Vinyl Sleeve</h3>
+                <span class="work-category">Identity</span>
+              </div>
+            </a>
+          </li>
+          <li class="work-card" data-category="print">
+            <a class="work-link" href="#works">
+              <img src="images/work-4.webp" alt="Vol. 16 booklet cover on a beige background" width="358" height="282" loading="lazy">
+              <div class="work-overlay">
+                <span class="work-plus" aria-hidden="true"><svg class="icon" width="20" height="20"><use href="#i-plus"/></svg></span>
+                <h3 class="work-title">Vol. 16 Booklet</h3>
+                <span class="work-category">Print</span>
+              </div>
+            </a>
+          </li>
+          <li class="work-card" data-category="branding">
+            <a class="work-link" href="#works">
+              <img src="images/work-5.webp" alt="Paper stationery mock-up on a salmon background" width="358" height="282" loading="lazy">
+              <div class="work-overlay">
+                <span class="work-plus" aria-hidden="true"><svg class="icon" width="20" height="20"><use href="#i-plus"/></svg></span>
+                <h3 class="work-title">Paper Mockup</h3>
+                <span class="work-category">Branding</span>
+              </div>
+            </a>
+          </li>
+          <!-- Cards 6–8 are shown from tablet up -->
+          <li class="work-card work-card--tablet" data-category="web">
+            <a class="work-link" href="#works">
+              <img src="images/work-6.webp" alt="Wall St. logo with a teal triangle" width="358" height="282" loading="lazy">
+              <div class="work-overlay">
+                <span class="work-plus" aria-hidden="true"><svg class="icon" width="20" height="20"><use href="#i-plus"/></svg></span>
+                <h3 class="work-title">Wall St. App</h3>
+                <span class="work-category">Web</span>
+              </div>
+            </a>
+          </li>
+          <li class="work-card work-card--tablet" data-category="identity">
+            <a class="work-link" href="#works">
+              <img src="images/work-7.webp" alt="John Doe design studio business card on a pink background" width="358" height="282" loading="lazy">
+              <div class="work-overlay">
+                <span class="work-plus" aria-hidden="true"><svg class="icon" width="20" height="20"><use href="#i-plus"/></svg></span>
+                <h3 class="work-title">John Doe Card</h3>
+                <span class="work-category">Identity</span>
+              </div>
+            </a>
+          </li>
+          <li class="work-card work-card--tablet" data-category="motion">
+            <a class="work-link" href="#works">
+              <img src="images/work-8.webp" alt="Seal Fabric label on a dark blue background" width="358" height="282" loading="lazy">
+              <div class="work-overlay">
+                <span class="work-plus" aria-hidden="true"><svg class="icon" width="20" height="20"><use href="#i-plus"/></svg></span>
+                <h3 class="work-title">Seal Fabric</h3>
+                <span class="work-category">Motion</span>
+              </div>
+            </a>
+          </li>
+          <!-- Card 9 is shown on desktop only (replace the image with the 9th work from Figma) -->
+          <li class="work-card work-card--desktop" data-category="web">
+            <a class="work-link" href="#works">
+              <img src="images/work-6.webp" alt="Profile UI project preview" width="358" height="282" loading="lazy">
+              <div class="work-overlay">
+                <span class="work-plus" aria-hidden="true"><svg class="icon" width="20" height="20"><use href="#i-plus"/></svg></span>
+                <h3 class="work-title">Profile UI</h3>
+                <span class="work-category">Web</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="portfolio-more">
+        <button type="button" class="btn btn-secondary btn-block-mobile">Load more works</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta" aria-labelledby="cta-title">
+    <div class="container cta-inner">
+      <h2 class="cta-title" id="cta-title">Would you love to work with us?</h2>
+      <a href="#contact" class="btn btn-primary">
+        <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-mail"/></svg>
+        Contact us
+      </a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section services" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <h2 class="section-title" id="services-title">What do we do</h2>
+      <p class="section-desc">We are a small team of designers and makers who help brands look their best online and offline.</p>
+      <ul class="services-list">
+        <li class="service-item">
+          <span class="service-icon"><svg class="icon" width="32" height="32" aria-hidden="true"><use href="#i-web"/></svg></span>
+          <h3>Web design</h3>
+          <p>Responsive sites and product interfaces that look sharp on every screen.</p>
+        </li>
+        <li class="service-item">
+          <span class="service-icon"><svg class="icon" width="32" height="32" aria-hidden="true"><use href="#i-motion"/></svg></span>
+          <h3>Motion video</h3>
+          <p>Explainers, logo animations and social clips that bring brands to life.</p>
+        </li>
+        <li class="service-item">
+          <span class="service-icon"><svg class="icon" width="32" height="32" aria-hidden="true"><use href="#i-print"/></svg></span>
+          <h3>Print design</h3>
+          <p>Posters, packaging and stationery prepared to be printed right.</p>
+        </li>
+        <li class="service-item">
+          <span class="service-icon"><svg class="icon" width="32" height="32" aria-hidden="true"><use href="#i-pen"/></svg></span>
+          <h3>Illustration</h3>
+          <p>Custom illustrations and icon sets in a style that is yours alone.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="container">
+      <ul class="stats-list">
+        <li class="stat-item"><span class="stat-num">120+</span><span class="stat-text">Projects done</span></li>
+        <li class="stat-item"><span class="stat-num">8</span><span class="stat-text">Years in draft</span></li>
+        <li class="stat-item"><span class="stat-num">64</span><span class="stat-text">Happy clients</span></li>
+        <li class="stat-item"><span class="stat-num">15</span><span class="stat-text">Design awards</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Clients & testimonial -->
+  <section class="section clients" aria-labelledby="clients-title">
+    <div class="container">
+      <h2 class="section-title" id="clients-title">Clients &amp; kind words</h2>
+      <p class="section-desc">Some of the teams that scaled up with their brands.</p>
+      <ul class="clients-list">
+        <li>Nordly</li><li>Halcyon</li><li>AFCO</li>
+        <li>Pinewood</li><li>Vela</li><li>Astra</li>
+      </ul>
+
+      <figure class="testimonial">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <blockquote>
+          <p>Keepsake turned a vague brief into a brand we are proud of. The team was fast, honest about trade-offs and obsessed with the details.</p>
+        </blockquote>
+        <div class="testimonial-bottom">
+          <figcaption class="testimonial-author">
+            <span class="avatar" aria-hidden="true">OM</span>
+            <span class="author-info">
+              <strong>Olena Marchenko</strong>
+              <span>Marketing Lead, Nordly</span>
+            </span>
+          </figcaption>
+          <div class="slider-dots" aria-hidden="true">
+            <span class="is-active"></span><span></span><span></span>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Journal -->
+  <section class="section journal" id="journal" aria-labelledby="journal-title">
+    <div class="container">
+      <h2 class="section-title" id="journal-title">From the journal</h2>
+      <p class="section-desc">Notes on process, case studies and things that inspire us.</p>
+      <div class="journal-list">
+        <article class="journal-card">
+          <div class="journal-thumb journal-thumb--1" aria-hidden="true"></div>
+          <div class="journal-info">
+            <p class="journal-meta"><time datetime="2024-10-26">Oct 26, 2024</time> / Branding</p>
+            <h3>Sollicitudin Tortor Inceptos</h3>
+            <p class="journal-text">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+            <a href="#journal" class="read-more">Read more <svg class="icon" width="12" height="12" aria-hidden="true"><use href="#i-chevron"/></svg></a>
+          </div>
+        </article>
+        <article class="journal-card">
+          <div class="journal-thumb journal-thumb--2" aria-hidden="true"></div>
+          <div class="journal-info">
+            <p class="journal-meta"><time datetime="2024-10-20">Oct 20, 2024</time> / Web design</p>
+            <h3>Amet Inceptos Fringilla Fusce</h3>
+            <p class="journal-text">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+            <a href="#journal" class="read-more">Read more <svg class="icon" width="12" height="12" aria-hidden="true"><use href="#i-chevron"/></svg></a>
+          </div>
+        </article>
+        <article class="journal-card">
+          <div class="journal-thumb journal-thumb--3" aria-hidden="true"></div>
+          <div class="journal-info">
+            <p class="journal-meta"><time datetime="2024-09-15">Sep 15, 2024</time> / Identity</p>
+            <h3>Cursus Malesuada Justo</h3>
+            <p class="journal-text">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+            <a href="#journal" class="read-more">Read more <svg class="icon" width="12" height="12" aria-hidden="true"><use href="#i-chevron"/></svg></a>
+          </div>
+        </article>
+        <article class="journal-card">
+          <div class="journal-thumb journal-thumb--4" aria-hidden="true"></div>
+          <div class="journal-info">
+            <p class="journal-meta"><time datetime="2024-09-02">Sep 2, 2024</time> / Motion</p>
+            <h3>Ornare Cursus Bibendum Purus</h3>
+            <p class="journal-text">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+            <a href="#journal" class="read-more">Read more <svg class="icon" width="12" height="12" aria-hidden="true"><use href="#i-chevron"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-top">
+      <div class="newsletter" id="subscribed">
+        <h2 class="footer-title">Newsletter</h2>
+        <p class="newsletter-text">Fresh case studies and design news, once a month.</p>
+
+        <form class="news-form" action="#subscribed" method="get">
+          <div class="news-row">
+            <label class="visually-hidden" for="newsletter-email">Email address</label>
+            <input class="news-input" type="email" id="newsletter-email" name="email" placeholder="Your email address" required aria-describedby="email-error">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="field-error" id="email-error">Please enter a valid email address.</p>
+          <label class="check-label" for="newsletter-consent">
+            <input type="checkbox" id="newsletter-consent" name="consent" required aria-describedby="consent-error">
+            I agree to the privacy policy
+          </label>
+          <p class="field-error" id="consent-error">Please accept the privacy policy.</p>
+        </form>
+
+        <p class="news-success" role="status">Thank you! You are subscribed to our newsletter.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h2 class="footer-title">Studio</h2>
+          <ul>
+            <li><a href="#home">About us</a></li>
+            <li><a href="#works">Our works</a></li>
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="#contact">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-title">Services</h2>
+          <ul>
+            <li><a href="#services">Web design</a></li>
+            <li><a href="#services">Motion video</a></li>
+            <li><a href="#services">Print design</a></li>
+            <li><a href="#services">Illustration</a></li>
+            <li><a href="#services">Brand strategy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <ul class="socials">
+        <li><a href="#" aria-label="Facebook"><svg class="icon icon--fill" width="16" height="16" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+        <li><a href="#" aria-label="Twitter"><svg class="icon icon--fill" width="16" height="16" aria-hidden="true"><use href="#i-twitter"/></svg></a></li>
+        <li><a href="#" aria-label="Dribbble"><svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-dribbble"/></svg></a></li>
+        <li><a href="#" aria-label="Instagram"><svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        <li><a href="#" aria-label="YouTube"><svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+      </ul>
+      <p class="copyright">&copy; 2026 Keepsake. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#home" class="to-top" aria-label="Back to top">
+  <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+</a>
+
+</body>
+</html>
